@@ -1,13 +1,86 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+
+body{
+    background-image:linear-gradient(rgb(0, 37, 72),rgb(121, 221, 255),lightgray);
+    background-size: 300%;
+    display: grid;
+    place-items:center;
+    height:100vh;
+    animation:move 10s linear infinite alternate-reverse;
+}
+.loading{
+    display:inline-block;
+    border:0.5em solid white;
+    border-left-color:#555;
+    width:10em;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    position:relative;
+    top:0.75em;
+    left:2em;
+    animation:spin 2s linear infinite;
+}
+@keyframes spin {
+    from{
+        rotate:0deg;
+    }
+    to{
+        rotate:360deg;
+    }
+}
+@keyframes move {
+    from{
+        background-position: top;
+    }
+    to{
+        background-position:bottom;
+    }
+}
+.quote{
+    position: relative;
+    box-shadow: 0 0 10px 1px #888;
+    border-radius:1.5em 1.5em 0;
+    width:30em;
+    text-indent:1em;
+    padding:1em;
+    line-height: 1.75em;
+    font-size:2em;
+    font-family:sans-serif;
+    background-color:#eaeaea;
+    letter-spacing: 1px;
+    word-spacing: 5px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.author{
+    display:block;
+    text-align:right;
+}
+button{
+    font-size:1.75em;
+    padding:0.5em;
+    border:2px solid;
+    border-radius: 0.5em;
+    background-color: rgb(197, 240, 255);
+    color:rgb(25, 161, 246);
+}
+button:active{
+    color: rgb(197, 240, 255);
+    background-color:rgb(48, 168, 242);
+}
+button:hover{
+    cursor: pointer;
+}
+.content{
+    background-color: #e1dfdf;
+    border-radius: 1em;
+    padding:0.5em;
+}
+.content::before{
+    content:open-quote;
+    font-size:1.5em;
+}
+.content::after{
+    content:close-quote;
+    font-size:1.5em;
+    vertical-align: middle;
 }
