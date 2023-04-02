@@ -2,7 +2,7 @@
 
 body{
     background-image:linear-gradient(rgb(0, 37, 72),rgb(121, 221, 255),lightgray);
-    background-size: 300%;
+    background-size:100% 300%;
     display: grid;
     place-items:center;
     height:100vh;
@@ -30,7 +30,7 @@ body{
 }
 @keyframes move {
     from{
-        background-position: top;
+        background-position:top;
     }
     to{
         background-position:bottom;
