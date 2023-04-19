@@ -11,7 +11,7 @@ export default function App() {
   const [loading, setLoading] = useState(false)
   function newQuote() {
     fetch('https://api.api-ninjas.com/v1/quotes?category=' + title[index],
-      { headers: { 'X-Api-Key': MY_API_KEY } })
+      { headers: { 'X-Api-Key': process.env.MY_API_KEY } })
       .then(response => response.json())
       .then(data => {
         setQuote(data[0]);
