@@ -12,7 +12,7 @@ body{
 .loading{
     border:0.5em solid white;
     border-left-color:#555;
-    width:10em;
+    width:7.5em;
     aspect-ratio: 1/1;
     border-radius: 50%;
     position:absolute;
@@ -40,6 +40,7 @@ body{
 .quote{
     position:relative;
     left:50%;
+    transform:translateX(-50%);left:50%;
     transform:translateX(-50%);
     margin-top:15vh;
     box-shadow: 0 0 10px 1px #888;
