@@ -3,10 +3,10 @@
 body{
     margin:0;
     background-image:linear-gradient(rgb(0, 37, 72),rgb(121, 221, 255),lightgray);
-    background-size:100% 300%;
+    background-size:100% 300vh;
     padding-inline:1em;
-    height:90vh;
-    animation:move 10s linear infinite 
+    height:100%;
+    animation:move 2s linear infinite 
     alternate-reverse;
 }
 .loading{
@@ -34,7 +34,7 @@ body{
         background-position:top;
     }
     to{
-        background-position:bottom;
+        background-position:95%;
     }
 }
 .quote{
@@ -60,7 +60,7 @@ body{
     text-align:right;
 }
 button{
-    font-size:1.6em;
+    font-size:1.75em;
     position:relative;
     left:50%;
     transform:translateX(-50%);
