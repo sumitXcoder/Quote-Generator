@@ -6,7 +6,7 @@ body{
     background-size:100% 300vh;
     padding-inline:1em;
     height:100%;
-    animation:move 2s linear infinite 
+    animation:move 10s linear infinite 
     alternate-reverse;
 }
 .loading{
